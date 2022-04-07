@@ -1,0 +1,21 @@
+Problem 1: 
+
+Consider a scenario where you have a Phone number-based login system where you
+send OTP to the phone number using a third-party SMS service and login the user.
+The third-party service charges 0.02 $ for each SMS and you have allotted 100$ as
+the balance for the same
+You discover that every hour 100$ is depleted and you have to keep recharging the
+balance despite not having huge traffic on your website/app
+Is there something wrong going on here?
+If yes, How will you fix it?
+
+Answer: Yes, There is a problem with design. Problem is occouring because users are continuosly hitting login API on failure of login. For some period of time need to restrict an API calls on failure of login after number of try.  
+
+Problem 2:
+
+Consider a scenario where you are a big spiderman fan and the latest spiderman
+movie has been released. You absolutely want to avoid spoilers on youtube, yet also
+browse through daily video content. You decide to make a basic script that blocks all
+spoiler videos. What should be the logic/solution to implement in this scenario?
+
+Answer: I'm not so sure about it. But we can achive it through DOM manipulation where in will try to find releavent html element and modify it. 
