@@ -1,0 +1,1 @@
+- Please refer postman collection in a folder. 
