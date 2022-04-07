@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"eventName\":\"Party at 2:30\",\n    \"duration\":\"120\",\n    \"startDate\":\"2022-04-07\",\n    \"startTime\":\"14:50\",\n    \"eventTimeZone\":\"Asia/Kolkata\"\n}",
+					"raw": "{\n    \"eventName\":\"Party at 6:50\",\n    \"duration\":\"120\",\n    \"startDate\":\"2022-04-07\",\n    \"startTime\":\"17:47\",\n    \"eventTimeZone\":\"Asia/Kolkata\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -30,12 +30,58 @@
 						"v1"
 					]
 				},
-				"description": "body should contains \neventName,duration,startDate,startTime"
+				"description": "Body should contains \neventName,duration,startDate,startTime,eventTimeZone"
 			},
 			"response": []
 		},
 		{
-			"name": "Get Event",
+			"name": "Get all events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/event/v1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"event",
+						"v1"
+					]
+				},
+				"description": "GET ALL EVENTS"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all upcoming events.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/event/v1?type=upcoming",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"event",
+						"v1"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "upcoming"
+						}
+					]
+				},
+				"description": "To get all upcoming events."
+			},
+			"response": []
+		},
+		{
+			"name": "Get all live events.",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -56,7 +102,7 @@
 						}
 					]
 				},
-				"description": "get event by type \ntype=upcoming,live\nif no type selected it'll retrive all"
+				"description": "To get all live events."
 			},
 			"response": []
 		}
